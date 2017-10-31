@@ -58,7 +58,7 @@ public class MailService {
 
         generateMailMessage = new MimeMessage(getMailSession);
         generateMailMessage.addRecipient(Message.RecipientType.TO,
-                new InternetAddress(request.getEmail())); //Repit if need more recipient to send
+                new InternetAddress(env.getProperty("recipient.email"))); //Repit if need more recipient to send
         generateMailMessage.setSubject("Potencial Contacto");
         String emailBody = "Nombre: " + request.getName() + "<br>Email: " +
                 request.getEmail() + "<br><br><br>Mensaje: " + request.getDescription();
