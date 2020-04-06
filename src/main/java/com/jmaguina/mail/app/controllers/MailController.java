@@ -1,6 +1,6 @@
 package com.jmaguina.mail.app.controllers;
 
-import com.jmaguina.mail.app.DTO.MailDTO;
+import com.jmaguina.mail.app.model.MailDto;
 import com.jmaguina.mail.app.services.MailService;
 //import ContactService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +31,7 @@ public class MailController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<String> post(@RequestBody MailDTO request){
+    public ResponseEntity<String> post(@RequestBody MailDto request){
         try{
             if(mailService.SendContactRequest(request)){
                 return new ResponseEntity<String>("Exitoso", HttpStatus.OK);

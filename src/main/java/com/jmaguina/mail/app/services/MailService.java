@@ -5,7 +5,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
-import com.jmaguina.mail.app.DTO.MailDTO;
+import com.jmaguina.mail.app.model.MailDto;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
@@ -30,7 +30,7 @@ public class MailService {
     @Autowired
     private Environment env;
 
-    public boolean SendContactRequest(MailDTO request) throws MessagingException, UnsupportedEncodingException {
+    public boolean SendContactRequest(MailDto request) throws MessagingException, UnsupportedEncodingException {
 
         // Step1 setup Mail Server Properties.
         mailServerProperties();
@@ -45,7 +45,7 @@ public class MailService {
         return true;
     }
 
-    private void getMailSession(MailDTO request) throws MessagingException {
+    private void getMailSession(MailDto request) throws MessagingException {
         System.out.println("\n\n 2nd ===> get Mail Session..");
         /*getMailSession = Session.getDefaultInstance(mailServerProperties, null);*/
 

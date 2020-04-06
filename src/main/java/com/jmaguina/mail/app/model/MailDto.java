@@ -1,18 +1,18 @@
-package com.jmaguina.mail.app.DTO;
+package com.jmaguina.mail.app.model;
 
 /**
  * Created by Jorge Maguina on 28/10/2017.
  */
-public class MailDTO {
+public class MailDto {
 
     public String name;
     public String email;
     public String description;
 
-    public MailDTO() {
+    public MailDto() {
     }
 
-    public MailDTO(String name, String email, String description) {
+    public MailDto(String name, String email, String description) {
         this.name = name;
         this.email = email;
         this.description = description;
