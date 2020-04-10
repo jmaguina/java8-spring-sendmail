@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * Clase main en springboot
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.jmaguina.mail"})
 public class SendMailApplication {
 
     public static void main(String[] args) {
@@ -14,3 +14,4 @@ public class SendMailApplication {
     }
 
 }
+
