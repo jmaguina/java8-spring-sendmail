@@ -2,14 +2,19 @@ package com.jmaguina.mail.config;
 
 import org.springframework.stereotype.Component;
 
-import javax.servlet.*;
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
 /**
  * Cors config
- * Created by Jorge Maguina on 28/10/2017.
+ * Created by Jorge Maguina.
  */
 @Component
 public class CORSFilter implements Filter {
